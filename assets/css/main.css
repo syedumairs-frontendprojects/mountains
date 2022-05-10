@@ -301,4 +301,47 @@ d-grid {
 
 /* Footer */
 
+.footer {
+  padding: 4rem 0 5rem;
+}
+
+.footer-container {
+  row-gap: 3.2rem;
+}
+
+.brand-information > * {
+  margin-bottom: var(--margin-bottom-md);
+}
+
+.copyright {
+  font-size: var(--font-size-sm);
+  margin-bottom: 0;
+  opacity: 0.8;
+}
+
+.footer-nav-title {
+  color: var(--clr-accent);
+  font-size: 2rem;
+  margin-bottom: var(--margin-bottom-md);
+}
+
+.footer-nav-link {
+  margin-bottom: var(--margin-bottom-sm);
+}
+
+.footer-nav-group,
+.brand-information {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-information {
+  order: 1;
+}
+
+.footer-nav {
+  order: 0;
+  gap: var(--margin-bottom-sm);
+}
+
 /* Media queries */
