@@ -152,6 +152,105 @@ img {
 }
 
 /* Hero */
+.hero {
+  position: relative;
+  height: 100rem;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6),
+    transparent 77%
+  );
+  z-index: 50;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.hero-data {
+  padding-top: 15rem;
+  position: relative;
+  z-index: 100;
+}
+
+.tagline {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  color: var(--clr-accent);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin-left: 5.5rem;
+  margin-bottom: var(--margin-bottom-sm);
+  position: relative;
+}
+
+.tagline::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -5.5rem;
+  width: 4rem;
+  height: 2px;
+  background-color: var(--clr-accent);
+  transform: translateY(-50%);
+}
+
+.title {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-lg);
+  font-weight: 300;
+  text-transform: capitalize;
+  line-height: 1.3;
+  margin-bottom: var(--margin-bottom-md);
+}
+
+.main-title {
+  font-size: var(--font-size-xl);
+}
+
+.btn {
+  display: inline-flex;
+  align-self: center;
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  gap: 1rem;
+}
+
+.parallax-img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 60rem;
+  object-fit: cover;
+  object-position: 30% 50%;
+}
+
+.parallax-img-bottom {
+  top: 55%;
+  z-index: 110;
+}
+
+.parallax-img-top {
+  top: 0;
+}
+
+.parallax-img-middle {
+  top: 35%;
+}
+
+.test {
+  height: 1000rem;
+}
 
 /* Hiking information */
 

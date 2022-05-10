@@ -3,9 +3,9 @@ const openMenuIcon = document.getElementById("menu-toggle-open");
 const closeMenuIcon = document.getElementById("menu-toggle-close");
 const mobileMenu = document.getElementById("mobile-menu");
 const headerOverlay = document.getElementById("header");
-const grassImage = document.getElementById("grassland");
+const grassImage = document.getElementById("greenland");
 const skyImage = document.getElementById("sky");
-const mountainsImage = document.getElementById("mountains");
+const mountainsImage = document.getElementById("mountain");
 const heroData = document.getElementById("hero-data");
 
 // Open menu & add overlay
@@ -23,3 +23,13 @@ closeMenuIcon.addEventListener("click", () => {
 // Close menu & remove overlay
 
 // Add parallax effect
+window.addEventListener("scroll", () => {
+  let scrollPosition = window.scrollY;
+
+  grassImage.style.transform = "translateY(" + -scrollPosition * 0.02 + "%)";
+  mountainsImage.style.transform =
+    "translateY(" + -scrollPosition * 0.04 + "%)";
+  skyImage.style.transform = "translateY(" + -scrollPosition * 0.01 + "%)";
+  heroData.style.transform = "translateY(" + -scrollPosition * 0.03 + "%)";
+  heroData.style.opacity = 1 - scrollPosition * 0.002;
+});
